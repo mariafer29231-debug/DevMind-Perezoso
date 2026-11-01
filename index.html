@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevMind | Piensa. Diseña. Programa.</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--navy:#101b3d;--navy2:#172653;--pink:#ff72ad;--pink2:#ffd2e4;--pale:#fff4f8;--ink:#202943;--muted:#74809b;--line:#e8eaf2;--white:#fff;--blue:#526de5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f8f9fd;color:var(--ink);font-family:'DM Sans',sans-serif}button{font:inherit;cursor:pointer}.topbar{height:76px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 7%;color:white;position:sticky;top:0;z-index:10;box-shadow:0 5px 24px #101b3d20}.brand{display:flex;align-items:center;gap:11px;font:700 24px 'Space Grotesk';letter-spacing:-.8px}.brand-mark{width:37px;height:37px;border-radius:12px;background:var(--pink);display:grid;place-items:center;color:var(--navy);font-weight:700;font-size:21px}.brand span b{color:var(--pink)}nav{display:flex;gap:30px}nav a{color:#dce2f5;text-decoration:none;font-size:14px;font-weight:600}nav a:hover{color:var(--pink)}.nav-cta{border:0;border-radius:11px;background:var(--pink);color:var(--navy);padding:11px 18px;font-weight:700}.hero{background:var(--navy);color:white;padding:76px 7% 90px;position:relative;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero:before{width:450px;height:450px;border:1px solid #ffffff12;right:7%;top:-210px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.hero:after{width:270px;height:270px;background:#ff72ad12;right:17%;bottom:-190px}.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--pink);background:#ff72ad18;border:1px solid #ff72ad40;padding:8px 13px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:.5px}.hero h1{font:700 clamp(42px,5.4vw,67px)/1.06 'Space Grotesk';letter-spacing:-2.8px;margin:22px 0}.hero h1 em{font-style:normal;color:var(--pink)}.hero p{color:#c4cce0;font-size:17px;line-height:1.75;max-width:550px}.hero-actions{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}.primary{background:var(--pink);color:var(--navy);border:0;padding:14px 21px;border-radius:12px;font-weight:700;box-shadow:0 8px 24px #ff72ad30}.secondary{background:#ffffff10;border:1px solid #ffffff38;color:white;padding:14px 21px;border-radius:12px;font-weight:600}.hero-note{margin-top:23px;color:#aab5d1;font-size:12px}.hero-note strong{color:white}.preview{background:#fff;border-radius:20px;padding:22px;box-shadow:0 25px 70px #050d2845;transform:rotate(1deg);max-width:440px;margin:auto;width:100%}.preview-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.dots{display:flex;gap:5px}.dots i{width:8px;height:8px;border-radius:50%;background:#ff789e}.dots i:nth-child(2){background:#ffc76b}.dots i:nth-child(3){background:#65d6aa}.preview-label{font-size:11px;color:var(--muted);font-weight:700}.question{background:#f4f5fb;border-radius:12px;padding:16px;margin-bottom:15px}.question small{color:var(--blue);font-weight:700}.question h3{font:600 17px 'Space Grotesk';margin:8px 0}.question p{font-size:12px;line-height:1.5;color:#68738d;margin:0}.steps{display:grid;gap:9px}.step{border:1px solid var(--line);padding:11px 13px;border-radius:10px;display:flex;gap:10px;align-items:center;font-size:12px;color:#53607b}.step b{width:23px;height:23px;border-radius:7px;background:var(--pink2);color:#9b3562;display:grid;place-items:center}.step.active{border-color:var(--pink);background:#fff8fb}.section{max-width:1180px;margin:auto;padding:75px 7%}.section-head{text-align:center;max-width:650px;margin:0 auto 38px}.kicker{color:#e34f91;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}.section h2{font:700 clamp(29px,4vw,40px) 'Space Grotesk';color:var(--navy);letter-spacing:-1.3px;margin:12px 0}.section-head p{color:var(--muted);line-height:1.7}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.feature{background:white;border:1px solid var(--line);padding:25px;border-radius:17px;box-shadow:0 8px 28px #18244a08}.feature-icon{width:46px;height:46px;border-radius:13px;background:#fff0f6;display:grid;place-items:center;font-size:22px}.feature h3{font:600 18px 'Space Grotesk';color:var(--navy);margin:18px 0 8px}.feature p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}.practice{background:#eef0f8;padding:75px 7%}.practice-inner{max-width:1180px;margin:auto}.practice-layout{display:grid;grid-template-columns: .8fr 1.2fr;gap:25px;align-items:start}.challenge-list,.challenge-box{background:white;border:1px solid var(--line);border-radius:17px;padding:22px}.challenge-list h3,.challenge-box h3{font:600 18px 'Space Grotesk';color:var(--navy);margin:0 0 16px}.challenge-tab{width:100%;text-align:left;background:white;border:1px solid var(--line);padding:13px;border-radius:11px;margin:5px 0;color:#59647e;font-weight:600;font-size:13px}.challenge-tab.active{background:#fff1f7;border-color:var(--pink);color:#a52f66}.level{font-size:10px;color:#e05291;font-weight:700;float:right}.challenge-box .tag{font-size:11px;color:#e05291;background:#fff0f6;padding:6px 9px;border-radius:20px;font-weight:700}.challenge-box h3{font-size:23px;margin:15px 0 8px}.challenge-box>p{font-size:14px;color:var(--muted);line-height:1.65}.prompt{background:#f5f6fb;border-left:3px solid var(--pink);padding:14px;border-radius:8px;font-size:13px;line-height:1.6;margin:18px 0}.challenge-box label{font-size:12px;font-weight:700;color:var(--navy);display:block;margin:13px 0 7px}.challenge-box textarea{width:100%;min-height:105px;border:1px solid #dfe3ee;border-radius:10px;padding:12px;font:13px 'DM Sans';resize:vertical;outline:none}.challenge-box textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff72ad20}.check-btn{margin-top:12px;background:var(--navy);color:white;border:0;padding:12px 17px;border-radius:10px;font-weight:700}.feedback{font-size:13px;margin-top:12px;line-height:1.5}.algorithm{background:white}.algo-card{max-width:850px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 10px 35px #1726530b}.algo-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.algo-top h3{font:600 20px 'Space Grotesk';color:var(--navy);margin:0}.algo-top select{border:1px solid var(--line);padding:10px;border-radius:9px;color:var(--ink);background:white}.algo-desc{color:var(--muted);font-size:13px;line-height:1.6}.algo-flow{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin:25px 0}.flow-node{background:#f0f2fb;border:1px solid #dfe3f4;border-radius:10px;padding:12px 15px;font-size:12px;font-weight:700;color:var(--navy)}.flow-node.pink{background:#fff0f6;border-color:#ffc4dc}.arrow{color:#e35a97;font-weight:700}.algo-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.algo-step{background:#f8f9fd;border-radius:11px;padding:14px}.algo-step b{display:block;color:#e05291;font-size:11px;margin-bottom:6px}.algo-step span{font-size:12px;color:#5d6882;line-height:1.5}.footer{background:var(--navy);color:white;padding:35px 7%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer p{color:#aeb8d2;font-size:12px;margin:7px 0 0}.footer .brand{font-size:21px}
+@media(max-width:800px){nav{display:none}.hero-inner,.practice-layout{grid-template-columns:1fr}.hero{padding-top:55px}.hero-inner{gap:38px}.preview{max-width:500px}.feature-grid{grid-template-columns:1fr 1fr}.section{padding:58px 6%}.practice{padding:58px 6%}}
+@media(max-width:520px){.feature-grid{grid-template-columns:1fr}.topbar{padding:0 5%}.nav-cta{padding:9px 12px;font-size:12px}.hero{padding-left:6%;padding-right:6%}.hero h1{letter-spacing:-1.7px}.hero p{font-size:15px}.algo-steps{grid-template-columns:1fr}.algo-card{padding:18px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">D</div><span>Dev<b>Mind</b></span></div>
+  <nav><a href="#inicio">Inicio</a><a href="#metodo">¿Cómo funciona?</a><a href="#retos">Retos</a><a href="#algoritmos">Algoritmos</a></nav>
+  <button class="nav-cta" onclick="document.querySelector('#retos').scrollIntoView({behavior:'smooth'})">Comenzar ahora ↗</button>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="hero-inner">
+  <div>
+   <span class="eyebrow">✦ APRENDE A PENSAR COMO PROGRAMADOR</span>
+   <h1>Primero piensa.<br>Después <em>programa.</em></h1>
+   <p>Desarrolla tu lógica, organiza tus ideas y aprende a resolver problemas paso a paso antes de escribir una sola línea de código.</p>
+   <div class="hero-actions"><button class="primary" onclick="document.querySelector('#retos').scrollIntoView({behavior:'smooth'})">Explorar retos <span>→</span></button><button class="secondary" onclick="document.querySelector('#metodo').scrollIntoView({behavior:'smooth'})">Conoce DevMind</button></div>
+   <div class="hero-note">✦ <strong>Tu espacio para entrenar la mente</strong> · Sin necesidad de experiencia previa</div>
+  </div>
+  <div class="preview">
+   <div class="preview-head"><div class="dots"><i></i><i></i><i></i></div><span class="preview-label">DEV MIND / ÁREA DE PRÁCTICA</span></div>
+   <div class="question"><small>RETO DE LÓGICA · NIVEL 01</small><h3>¿Cómo organizarías este problema?</h3><p>Una tienda necesita calcular el total de una compra con varios productos. ¿Qué pasos debería seguir?</p></div>
+   <div class="steps"><div class="step active"><b>1</b> Comprender qué pide el problema</div><div class="step"><b>2</b> Identificar los datos necesarios</div><div class="step"><b>3</b> Ordenar los pasos de solución</div><div class="step"><b>4</b> Comprobar el resultado</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="metodo">
+ <div class="section-head"><span class="kicker">Aprende con intención</span><h2>La lógica es el primer paso</h2><p>En DevMind no empiezas memorizando código. Aprendes a analizar una situación, dividirla en partes y construir una solución clara.</p></div>
+ <div class="feature-grid">
+  <article class="feature"><div class="feature-icon">🧠</div><h3>Retos de lógica</h3><p>Resuelve situaciones que ponen a prueba tu razonamiento, identificación de patrones y capacidad para tomar decisiones.</p></article>
+  <article class="feature"><div class="feature-icon">🔀</div><h3>Diseño de algoritmos</h3><p>Organiza instrucciones en una secuencia lógica y aprende a representar soluciones antes de convertirlas en código.</p></article>
+  <article class="feature"><div class="feature-icon">🎯</div><h3>Aprendizaje progresivo</h3><p>Avanza desde ejercicios básicos hasta problemas que requieren más análisis, planificación y creatividad.</p></article>
+ </div>
+</section>
+
+<section class="practice" id="retos">
+ <div class="practice-inner">
+  <div class="section-head"><span class="kicker">Ponte a prueba</span><h2>Tu próximo reto comienza aquí</h2><p>Lee el problema, piensa en los pasos necesarios y escribe tu propuesta. ¡No necesitas código para comenzar!</p></div>
+  <div class="practice-layout">
+   <aside class="challenge-list"><h3>Retos disponibles</h3>
+    <button class="challenge-tab active" data-challenge="0">01 · La compra inteligente <span class="level">FÁCIL</span></button>
+    <button class="challenge-tab" data-challenge="1">02 · ¿Par o impar? <span class="level">FÁCIL</span></button>
+    <button class="challenge-tab" data-challenge="2">03 · El mayor de tres <span class="level">MEDIO</span></button>
+   </aside>
+   <article class="challenge-box">
+    <span class="tag" id="challengeTag">RETO 01 · LÓGICA</span><h3 id="challengeTitle">La compra inteligente</h3>
+    <p id="challengeDesc">Una persona compra varios productos en una tienda. Necesita conocer cuánto debe pagar en total.</p>
+    <div class="prompt" id="challengePrompt"><b>Piensa:</b> ¿Qué información necesitas conocer? ¿Qué operación debes realizar? ¿En qué orden?</div>
+    <label for="answer">Escribe cómo resolverías el problema:</label>
+    <textarea id="answer" placeholder="1. Primero...&#10;2. Después...&#10;3. Finalmente..."></textarea>
+    <button class="check-btn" id="hintBtn">Ver una pista</button>
+    <button class="check-btn" id="resetBtn" style="background:#fff0f6;color:#9b3562;margin-left:7px">Limpiar</button>
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section algorithm" id="algoritmos">
+ <div class="section-head"><span class="kicker">De la idea a la solución</span><h2>Explora cómo se construye un algoritmo</h2><p>Un algoritmo es un conjunto de pasos ordenados que permite resolver un problema. Observa este ejemplo.</p></div>
+ <div class="algo-card">
+  <div class="algo-top"><h3 id="algoTitle">Calcular el promedio de tres notas</h3><select id="algoSelect" aria-label="Seleccionar ejercicio"><option value="0">Promedio de tres notas</option><option value="1">Determinar si es par o impar</option><option value="2">Encontrar el mayor de dos números</option></select></div>
+  <p class="algo-desc" id="algoDesc">Tenemos tres calificaciones y queremos conocer su promedio.</p>
+  <div class="algo-flow" id="algoFlow"><span class="flow-node">Inicio</span><span class="arrow">→</span><span class="flow-node">Leer nota 1, 2 y 3</span><span class="arrow">→</span><span class="flow-node pink">Sumar y dividir entre 3</span><span class="arrow">→</span><span class="flow-node">Mostrar promedio</span><span class="arrow">→</span><span class="flow-node">Fin</span></div>
+  <div class="algo-steps" id="algoSteps"><div class="algo-step"><b>PASO 01</b><span>Identificar los datos: las tres notas.</span></div><div class="algo-step"><b>PASO 02</b><span>Sumar las notas y dividir el resultado entre tres.</span></div><div class="algo-step"><b>PASO 03</b><span>Mostrar el promedio obtenido.</span></div></div>
+ </div>
+</section>
+</main>
+<footer class="footer"><div><div class="brand"><div class="brand-mark">D</div><span>Dev<b>Mind</b></span></div><p>Piensa diferente. Resuelve mejor. Programa con propósito.</p></div><p>© 2026 DevMind · Aprende lógica a tu ritmo.</p></footer>
+<script>
+const challenges=[
+ {title:"La compra inteligente",desc:"Una persona compra varios productos en una tienda. Necesita conocer cuánto debe pagar en total.",prompt:"¿Qué información necesitas conocer? ¿Qué operación debes realizar? ¿En qué orden?",hint:"Pista: identifica el precio y la cantidad de cada producto. Calcula el subtotal de cada uno y luego suma todos los subtotales."},
+ {title:"¿Par o impar?",desc:"Un programa debe recibir un número entero e indicar si es par o impar.",prompt:"¿Qué dato debes recibir? ¿Cómo puedes saber si se puede dividir exactamente entre dos?",hint:"Pista: piensa en el residuo de una división entre 2. Si el residuo es 0, el número es par; de lo contrario, es impar."},
+ {title:"El mayor de tres",desc:"Necesitas comparar tres números diferentes o iguales para determinar cuál es el mayor.",prompt:"¿Qué datos necesitas? ¿Qué comparaciones debes hacer para encontrar el valor más grande?",hint:"Pista: puedes tomar el primer número como referencia y compararlo con los otros dos, actualizando el mayor cuando encuentres uno más grande."}
+];
+document.querySelectorAll('.challenge-tab').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.challenge-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ const c=challenges[Number(btn.dataset.challenge)];document.getElementById('challengeTitle').textContent=c.title;document.getElementById('challengeDesc').textContent=c.desc;document.getElementById('challengePrompt').innerHTML='<b>Piensa:</b> '+c.prompt;document.getElementById('challengeTag').textContent='RETO 0'+(Number(btn.dataset.challenge)+1)+' · LÓGICA';document.getElementById('feedback').textContent='';document.getElementById('answer').value='';
+}));
+document.getElementById('hintBtn').addEventListener('click',()=>{const i=Number(document.querySelector('.challenge-tab.active').dataset.challenge);document.getElementById('feedback').textContent=challenges[i].hint;document.getElementById('feedback').style.color='#9b3562';});
+document.getElementById('resetBtn').addEventListener('click',()=>{document.getElementById('answer').value='';document.getElementById('feedback').textContent='';});
+const algos=[
+ {title:"Calcular el promedio de tres notas",desc:"Tenemos tres calificaciones y queremos conocer su promedio.",flow:["Inicio","Leer nota 1, 2 y 3","Sumar y dividir entre 3","Mostrar promedio","Fin"],steps:["Identificar los datos: las tres notas.","Sumar las notas y dividir el resultado entre tres.","Mostrar el promedio obtenido."]},
+ {title:"Determinar si un número es par o impar",desc:"Recibimos un número entero y comprobamos si es divisible exactamente entre dos.",flow:["Inicio","Leer número","Calcular residuo ÷ 2","¿Residuo = 0?","Mostrar resultado","Fin"],steps:["Solicitar y guardar un número entero.","Dividir entre dos y revisar el residuo.","Si es cero, mostrar “par”; si no, mostrar “impar”."]},
+ {title:"Encontrar el mayor de dos números",desc:"Comparamos dos valores para identificar cuál es el más grande o si son iguales.",flow:["Inicio","Leer A y B","Comparar A con B","Mostrar mayor o igualdad","Fin"],steps:["Solicitar los dos números.","Comparar si A es mayor, B es mayor o ambos son iguales.","Mostrar el resultado correspondiente."]}
+];
+document.getElementById('algoSelect').addEventListener('change',e=>{
+ const a=algos[Number(e.target.value)];document.getElementById('algoTitle').textContent=a.title;document.getElementById('algoDesc').textContent=a.desc;
+ document.getElementById('algoFlow').innerHTML=a.flow.map((v,i)=>'<span class="flow-node '+((i===2)?'pink':'')+'">'+v+'</span>'+(i<a.flow.length-1?'<span class="arrow">→</span>':'')).join('');
+ document.getElementById('algoSteps').innerHTML=a.steps.map((v,i)=>'<div class="algo-step"><b>PASO 0'+(i+1)+'</b><span>'+v+'</span></div>').join('');
+});
+</script>
+</body>
+</html>
